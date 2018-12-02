@@ -5,34 +5,7 @@ import Cards from './Card.js'
 
 class Main extends Component {
 
-    state = {
-        // card1: { nama: ' Windy', alamat: ' Cilacap', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSe2RZPYUJC-vpqwAQzfJLAvTiX61rseiIza_qS0XtCLTe7gFjY' },
-        // card2: { nama: ' Kurniawan', alamat: ' Jeruklegi', image: 'http://hausadictionary.com/images/thumb/b/bf/--kifi--_--_--fish--_2016-09-22_17-43.jpeg/300px---kifi--_--_--fish--_2016-09-22_17-43.jpeg' },
-        // card3: { nama: ' Alvin', alamat: ' Gombong', image: '' },
-        // card4: { nama: ' Adetya', alamat: ' Kebumen', image: '' }
-        datacard: [
-            {
-                nama: ' Windy',
-                alamat: ' Cilacap',
-                image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSe2RZPYUJC-vpqwAQzfJLAvTiX61rseiIza_qS0XtCLTe7gFjY'
-            },
-            {
-                nama: ' Kurniawan',
-                alamat: ' Jeruklegi',
-                image: 'http://hausadictionary.com/images/thumb/b/bf/--kifi--_--_--fish--_2016-09-22_17-43.jpeg/300px---kifi--_--_--fish--_2016-09-22_17-43.jpeg'
-            },
-            {
-                nama: ' Alvin',
-                alamat: ' Gombong',
-                image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSe2RZPYUJC-vpqwAQzfJLAvTiX61rseiIza_qS0XtCLTe7gFjY'
-            },
-            {
-                nama: ' Adetya',
-                alamat: ' Kebumen',
-                image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSe2RZPYUJC-vpqwAQzfJLAvTiX61rseiIza_qS0XtCLTe7gFjY'
-            }
-        ]
-    }
+
 
     render() {
         // console.log(this.state.datacard)
@@ -41,12 +14,11 @@ class Main extends Component {
                 <Jumbotrons name=' Windy' />
                 <div className="card-grouping">
                     <container>
+                        <Cards olahraga='Renang' image='http://cdn2.tstatic.net/banjarmasin/foto/bank/images/renang-di-sungai-besar-jadi-keceriaan-mereka_20170308_153820.jpg' />
+                        <Cards olahraga='Sepakbola' image='https://3.bp.blogspot.com/-AaeLtQVhQeE/We2AnOqalrI/AAAAAAAAFPQ/K24ocL_j5fU5aG_Fya-EURKo2swtSj0_wCLcBGAs/s1600/main-bola-hujan-andumhumor.jpg' />
+                        <Cards olahraga='MotoGP' image='http://i.ytimg.com/vi/mNb6KIFyoe4/sddefault.jpg' />
+                        <Cards olahraga='Matador' image='https://cdn2.boombastis.com/wp-content/uploads/2014/12/3.-Sawah-Cruliamrullah.jpg' />
 
-                        {this.state.datacard.map((isi, index) => {
-                            return (<Cards nama={isi.nama} alamat={isi.alamat} image={isi.image} />)
-                        })}
-
-                        {/* <Cards nama={this.state.card1.nama} alamat={this.state.card1.alamat} image={this.state.card1.image} /> */}
                     </container>
                 </div >
             </div>

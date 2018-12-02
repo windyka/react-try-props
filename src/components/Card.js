@@ -1,27 +1,49 @@
-import React from 'react';
+import React, { Component } from 'react'
 import {
-    Card, CardImg, CardText, CardBody,
-    CardTitle, CardSubtitle, Button
+    Button,
+    Card, CardImg, CardBody,
+    CardTitle,
 } from 'reactstrap';
 import './Card.css'
 
 
+class Cards extends Component {
 
-const Cards = (props) => {
-    return (
+    state = {
+        angka: 0
+    }
 
-        <Card>
-            <CardImg top width="100%" src={props.image} alt="Card image cap" />
-            <CardBody>
-                <CardTitle>Nama :{props.nama}</CardTitle>
-                <CardSubtitle>Alamat :{props.alamat}</CardSubtitle>
-                <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
-                <Button color="danger">Button</Button>
-            </CardBody>
-        </Card>
+    tambah = () => {
+        this.setState({
+            angka: this.state.angka + 1
+        })
+        console.log(this.state.angka)
+    }
 
+    kurang = () => {
+        this.setState({
+            angka: this.state.angka - 1
+        })
+        console.log(this.state.angka)
+    }
 
-    );
-};
+    render() {
+        return (
+            <div>
+                <Card>
+                    <CardBody>
+                        <CardTitle><h1>{this.state.angka}{''}      Kali</h1></CardTitle>
+                    </CardBody>
+                    <img width="100%" src={this.props.image} />
+                    <CardBody>
+                        <CardTitle><h2>{this.props.olahraga}</h2></CardTitle>
+                        <Button onClick={() => this.tambah()} color="danger">Tambah</Button>{' '}
+                        <Button onClick={() => this.kurang()} color="warning">Kurang</Button>
+                    </CardBody>
+                </Card>
+            </div >
+        )
+    }
+}
 
-export default Cards;
+export default Cards
