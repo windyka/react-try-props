@@ -1,0 +1,17 @@
+div.jumbotron-contained { 
+    height:243px;
+    background-color: rgb(193, 149, 235);
+}
+
+div.jumbotron {
+    padding: 0px 40px 40px 40px;
+    margin-bottom: 0px;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQmYhTvEAafFzzRCA-fKhvgmql6wi4ENdcveMW0Ty0hIrdNT7P4');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: yellow;
+}
+
+button.btn {
+    /* margin-bottom: 15px !important; */
+}
