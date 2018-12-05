@@ -37,10 +37,10 @@ export default class Navbars extends React.Component {
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>
                             <NavItem>
-                                <NavLink href="/components/">About</NavLink>
+                                <NavLink onClick={() => this.props.changePage("About")} >About</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink href="https://github.com/reactstrap/reactstrap">Features</NavLink>
+                                <NavLink onClick={() => this.props.changePage("Feature")} >Features</NavLink>
                             </NavItem>
                             <UncontrolledDropdown nav inNavbar>
                                 <DropdownToggle nav caret>

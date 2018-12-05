@@ -18,7 +18,6 @@ class Cards extends Component {
         this.setState({
             angka: angka + 1
         })
-        console.log(angka)
     }
 
     kurang = () => {
@@ -40,7 +39,7 @@ class Cards extends Component {
             <div>
                 <Card>
                     <CardBody>
-                        <CardTitle><h1>{this.state.angka}{''}      Kali</h1></CardTitle>
+                        <CardTitle><h1>{this.state.angka}{''} Kali</h1></CardTitle>
                     </CardBody>
                     <img width="100%" src={image} />
                     <CardBody>
