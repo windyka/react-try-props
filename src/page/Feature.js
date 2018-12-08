@@ -5,6 +5,7 @@ class Features extends Component {
         return (
             <div>
                 <h1>This Feature</h1>
+                <img src="https://www.fdfa.be/sites/default/files/thumbnails/image/UnderConstructionFestival-slide-TRK010xprt14.png" alt="" />
             </div>
         )
     }
