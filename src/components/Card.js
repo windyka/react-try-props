@@ -14,31 +14,38 @@ class Cards extends Component {
     }
 
     tambah = () => {
+        const { angka } = this.state
         this.setState({
-            angka: this.state.angka + 1
+            angka: angka + 1
         })
-        console.log(this.state.angka)
     }
 
     kurang = () => {
+        const { angka } = this.state
+        if (angka <= 0) {
+            return alert('wrong')
+        }
         this.setState({
-            angka: this.state.angka - 1
+            angka: angka - 1
         })
-        console.log(this.state.angka)
+
     }
 
     render() {
+        const { image, olahraga } = this.props
+        const { tambah, kurang } = this
+
         return (
             <div>
                 <Card>
                     <CardBody>
-                        <CardTitle><h1>{this.state.angka}{''}      Kali</h1></CardTitle>
+                        <CardTitle><h1>{this.state.angka}{''} Kali</h1></CardTitle>
                     </CardBody>
-                    <img width="100%" src={this.props.image} />
+                    <img width="100%" src={image} />
                     <CardBody>
-                        <CardTitle><h2>{this.props.olahraga}</h2></CardTitle>
-                        <Button onClick={() => this.tambah()} color="danger">Tambah</Button>{' '}
-                        <Button onClick={() => this.kurang()} color="warning">Kurang</Button>
+                        <CardTitle><h2>{olahraga}</h2></CardTitle>
+                        <Button onClick={() => tambah()} color="danger">Tambah</Button>{' '}
+                        <Button onClick={() => kurang()} color="warning">Kurang</Button>
                     </CardBody>
                 </Card>
             </div >

@@ -14,7 +14,7 @@ import {
 } from 'reactstrap';
 import './Navbar.css'
 
-export default class Example extends React.Component {
+export default class Navbars extends React.Component {
     constructor(props) {
         super(props);
 
@@ -32,15 +32,15 @@ export default class Example extends React.Component {
         return (
             <div>
                 <Navbar color="light" light expand="md">
-                    <NavbarBrand href="/">ReactNation</NavbarBrand>
+                    <NavbarBrand onClick={() => this.props.changePage("Home")}>ReactBook</NavbarBrand>
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>
                             <NavItem>
-                                <NavLink href="/components/">Components</NavLink>
+                                <NavLink onClick={() => this.props.changePage("About")} >About</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+                                <NavLink onClick={() => this.props.changePage("Feature")} >Features</NavLink>
                             </NavItem>
                             <UncontrolledDropdown nav inNavbar>
                                 <DropdownToggle nav caret>
