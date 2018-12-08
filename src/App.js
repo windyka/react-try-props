@@ -3,7 +3,9 @@ import Home from '../src/page/Home.js'
 import './App.css'
 import Abouts from './page/About.js';
 import Features from './page/Feature.js';
-import Navbar from './components/Navbar'
+import Navbar from './components/Navbar.js';
+import OptionOne from './page/Option1.js';
+import OptionTwo from './page/Option2.js';
 
 class App extends Component {
   state = {
@@ -21,7 +23,7 @@ class App extends Component {
     const { page } = this.state
     const { changePage } = this
 
-    if (page === "Home") {
+    if (page === "Home" || page === "Reset") {
       return (
         <div>
           <Navbar changePage={changePage} />
@@ -40,6 +42,20 @@ class App extends Component {
         <div>
           <Navbar changePage={changePage} />
           <Features />
+        </div>
+      )
+    } else if (page === "OptionOne") {
+      return (
+        <div>
+          <Navbar changePage={changePage} />
+          <OptionOne />
+        </div>
+      )
+    } else if (page === "OptionTwo") {
+      return (
+        <div>
+          <Navbar changePage={changePage} />
+          <OptionTwo />
         </div>
       )
     } else {

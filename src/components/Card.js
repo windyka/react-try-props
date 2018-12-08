@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import {
     Button,
-    Card, CardImg, CardBody,
+    Card, CardBody,
     CardTitle,
 } from 'reactstrap';
 import './Card.css'
@@ -41,7 +41,7 @@ class Cards extends Component {
                     <CardBody>
                         <CardTitle><h1>{this.state.angka}{''} Kali</h1></CardTitle>
                     </CardBody>
-                    <img width="100%" src={image} />
+                    <img width="100%" src={image} alt='' />
                     <CardBody>
                         <CardTitle><h2>{olahraga}</h2></CardTitle>
                         <Button onClick={() => tambah()} color="danger">Tambah</Button>{' '}

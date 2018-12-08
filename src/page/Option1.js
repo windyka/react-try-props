@@ -1,15 +1,13 @@
 import React, { Component } from 'react'
-import Main from '../components/Main.js'
 
-class Home extends Component {
+class OptionOne extends Component {
     render() {
         return (
             <div>
-
-                <Main />
+                <h1>This option 1</h1>
             </div>
         )
     }
 }
 
-export default Home
+export default OptionOne
