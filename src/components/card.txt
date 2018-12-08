@@ -1,0 +1,29 @@
+<Card>
+                    <CardImg top width="100%" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSe2RZPYUJC-vpqwAQzfJLAvTiX61rseiIza_qS0XtCLTe7gFjY" alt="Card image cap" />
+                    <CardBody>
+                        <CardTitle>Nama :{props.namaDua} </CardTitle>
+                        <CardSubtitle>Alamat :{props.alamatDua} </CardSubtitle>
+                        <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
+                        <Button color="danger">Button</Button>
+                    </CardBody>
+                </Card>
+
+                <Card>
+                    <CardImg top width="100%" src="http://hausadictionary.com/images/thumb/b/bf/--kifi--_--_--fish--_2016-09-22_17-43.jpeg/300px---kifi--_--_--fish--_2016-09-22_17-43.jpeg" alt="Card image cap" />
+                    <CardBody>
+                        <CardTitle>Nama :{props.namaTiga} </CardTitle>
+                        <CardSubtitle>Alamat :{props.alamatTiga} </CardSubtitle>
+                        <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
+                        <Button color="danger">Button</Button>
+                    </CardBody>
+                </Card>
+
+                <Card>
+                    <CardImg top width="100%" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTmGoizJkZ9Fe3WEFNwyVVroEMpODVYIhy9Eilz_5UZleRmkphN" alt="Card image cap" />
+                    <CardBody>
+                        <CardTitle>Nama :{props.namaEmpat} </CardTitle>
+                        <CardSubtitle>Alamat :{props.alamatEmpat} </CardSubtitle>
+                        <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
+                        <Button color="danger">Button</Button>
+                    </CardBody>
+                </Card>
