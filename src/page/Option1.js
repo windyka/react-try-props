@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class OptionOne extends Component {
+class Option extends Component {
     render() {
         return (
             <div>
@@ -11,4 +11,4 @@ class OptionOne extends Component {
     }
 }
 
-export default OptionOne
+export default Option

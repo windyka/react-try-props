@@ -32,29 +32,29 @@ export default class Navbars extends React.Component {
         return (
             <div>
                 <Navbar color="light" light expand="md">
-                    <NavbarBrand onClick={() => this.props.changePage("Home")}>ReactBook</NavbarBrand>
+                    <NavbarBrand onClick={() => this.props.Page("Home")}>ReactBook</NavbarBrand>
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>
                             <NavItem>
-                                <NavLink onClick={() => this.props.changePage("About")} >About</NavLink>
+                                <NavLink onClick={() => this.props.Page("About")} >About</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink onClick={() => this.props.changePage("Feature")} >Features</NavLink>
+                                <NavLink onClick={() => this.props.Page("Feature")} >Features</NavLink>
                             </NavItem>
                             <UncontrolledDropdown nav inNavbar>
                                 <DropdownToggle nav caret>
                                     Options
                                 </DropdownToggle>
                                 <DropdownMenu right>
-                                    <DropdownItem onclick={() => this.props.changePage("OptionOne")}>
+                                    <DropdownItem onClick={() => this.props.Page("Option")}>
                                         Option 1
                                     </DropdownItem>
-                                    <DropdownItem onClick={() => this.props.changePage("OptionTwo")}>
+                                    <DropdownItem onClick={() => this.props.Page("OptionTwo")}>
                                         Option 2
                                     </DropdownItem>
                                     <DropdownItem divider />
-                                    <DropdownItem onClick={() => this.props.changePage("Reset")}>
+                                    <DropdownItem onClick={() => this.props.Page("Reset")}>
                                         Reset
                                     </DropdownItem>
                                 </DropdownMenu>
