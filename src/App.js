@@ -4,12 +4,12 @@ import './App.css'
 import Abouts from './page/About.js';
 import Features from './page/Feature.js';
 import Navbar from './components/Navbar.js';
-import OptionOne from './page/Option1.js';
-import OptionTwo from './page/Option2.js';
+import Option from './page/Option1.js';
+import OptionsTwo from './page/Option2.js';
 
 class App extends Component {
   state = {
-    page: "Home"
+    page: "Option"
   }
 
   changePage = (layout) => {
@@ -44,18 +44,18 @@ class App extends Component {
           <Features />
         </div>
       )
-    } else if (page === "OptionOne") {
+    } else if (page === "Option") {
       return (
         <div>
           <Navbar changePage={changePage} />
-          <OptionOne />
+          <Option />
         </div>
       )
     } else if (page === "OptionTwo") {
       return (
         <div>
           <Navbar changePage={changePage} />
-          <OptionTwo />
+          <OptionsTwo />
         </div>
       )
     } else {

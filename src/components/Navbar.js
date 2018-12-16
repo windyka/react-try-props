@@ -47,7 +47,7 @@ export default class Navbars extends React.Component {
                                     Options
                                 </DropdownToggle>
                                 <DropdownMenu right>
-                                    <DropdownItem onclick={() => this.props.changePage("OptionOne")}>
+                                    <DropdownItem onClick={() => this.props.changePage("Option")}>
                                         Option 1
                                     </DropdownItem>
                                     <DropdownItem onClick={() => this.props.changePage("OptionTwo")}>
