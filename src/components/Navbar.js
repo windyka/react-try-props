@@ -14,6 +14,8 @@ import {
 } from 'reactstrap';
 import './Navbar.css'
 
+import { Link, } from 'react-router-dom'
+
 export default class Navbars extends React.Component {
     constructor(props) {
         super(props);
@@ -32,31 +34,43 @@ export default class Navbars extends React.Component {
         return (
             <div>
                 <Navbar color="light" light expand="md">
-                    <NavbarBrand onClick={() => this.props.Page("Home")}>ReactBook</NavbarBrand>
+                    <Link to="/">
+                        <NavbarBrand>ReactBook</NavbarBrand>
+                    </Link>
+
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>
                             <NavItem>
-                                <NavLink onClick={() => this.props.Page("About")} >About</NavLink>
+                                <Link to="/about">
+                                    <NavLink>About</NavLink>
+                                </Link>
+
                             </NavItem>
                             <NavItem>
-                                <NavLink onClick={() => this.props.Page("Feature")} >Features</NavLink>
+                                <Link to="/feature">
+                                    <NavLink>Features</NavLink>
+                                </Link>
+
                             </NavItem>
                             <UncontrolledDropdown nav inNavbar>
                                 <DropdownToggle nav caret>
                                     Options
                                 </DropdownToggle>
                                 <DropdownMenu right>
-                                    <DropdownItem onClick={() => this.props.Page("Option")}>
-                                        Option 1
-                                    </DropdownItem>
-                                    <DropdownItem onClick={() => this.props.Page("OptionTwo")}>
-                                        Option 2
-                                    </DropdownItem>
+                                    <Link to="/option">
+                                        <DropdownItem>Option 1</DropdownItem>
+                                    </Link>
+
+                                    <Link to="/option2">
+                                        <DropdownItem> Option 2</DropdownItem>
+                                    </Link>
+
                                     <DropdownItem divider />
-                                    <DropdownItem onClick={() => this.props.Page("Reset")}>
-                                        Reset
-                                    </DropdownItem>
+                                    <Link to="/not-found">
+                                        <DropdownItem>Not Found</DropdownItem>
+                                    </Link>
+
                                 </DropdownMenu>
                             </UncontrolledDropdown>
                         </Nav>

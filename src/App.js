@@ -6,6 +6,10 @@ import Features from './page/Feature.js';
 import Navbars from './components/Navbar.js';
 import Option from './page/Option1.js';
 import OptionsTwo from './page/Option2.js';
+import NotFound from './page/NotFound'
+
+import { Route, Switch, } from 'react-router-dom'
+
 
 class App extends Component {
   state = {
@@ -26,7 +30,15 @@ class App extends Component {
     return (
       <div>
         <Navbars Page={this.changePage} />
-        {this.state.page === "Home" || this.state.page === "Reset" ? (<Home />) : this.state.page === "About" ? (<Abouts />) : this.state.page === "Feature" ? (<Features />) : this.state.page === "Option" ? (<Option />) : this.state.page === "OptionTwo" ? (<OptionsTwo />) : <h1>404 Not Found!</h1>}
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/about" component={Abouts} />
+          <Route path="/feature" component={Features} />
+          <Route path="/option" component={Option} />
+          <Route path="/option2" component={OptionsTwo} />
+          <Route component={NotFound} />
+        </Switch>
+
       </div>
     )
 
